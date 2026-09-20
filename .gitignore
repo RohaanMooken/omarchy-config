@@ -7,6 +7,7 @@
 
 !/hypr/
 /hypr/*
+!/hypr/autostart.lua
 !/hypr/darkwindow.lua
 !/hypr/input.lua
 

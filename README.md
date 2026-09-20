@@ -4,7 +4,10 @@ The two Omarchy customizations worth carrying between machines: a custom lock
 screen (password draws a circuit board, no visible field) and the
 Hypr-DarkWindow rule that kills the white Chromium new-tab flash.
 
-Also carries `hypr/input.lua` (keyboard layouts, touchpad tuning).
+Also carries `hypr/input.lua` (keyboard layouts, touchpad tuning) and
+`hypr/autostart.lua`, whose `hyprpm reload` is what loads hyprpm plugins at
+every boot — Hyprland does not do it on its own, and until it runs the config
+parses with `hl.plugin.darkwindow == nil`, so the rule is silently skipped.
 
 Lives at `~/.config`, so files land where Omarchy already looks for them.
 
@@ -24,7 +27,8 @@ Then wire up both pieces:
 omarchy plugin enable rohaanmm.lock
 omarchy plugin disable omarchy.lock
 
-# darkwindow: hyprpm plugin + one require in hyprland.lua
+# darkwindow: install the hyprpm plugin, then add the one require
+# (autostart.lua already handles reloading it on every boot)
 hyprpm add https://github.com/micha4w/Hypr-DarkWindow && hyprpm enable Hypr-DarkWindow
 echo 'require("hypr.darkwindow")' >> ~/.config/hypr/hyprland.lua && hyprctl reload
 ```
