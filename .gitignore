@@ -8,6 +8,7 @@
 !/hypr/
 /hypr/*
 !/hypr/darkwindow.lua
+!/hypr/input.lua
 
 !/omarchy/
 /omarchy/*

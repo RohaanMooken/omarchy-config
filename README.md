@@ -4,6 +4,8 @@ The two Omarchy customizations worth carrying between machines: a custom lock
 screen (password draws a circuit board, no visible field) and the
 Hypr-DarkWindow rule that kills the white Chromium new-tab flash.
 
+Also carries `hypr/input.lua` (keyboard layouts, touchpad tuning).
+
 Lives at `~/.config`, so files land where Omarchy already looks for them.
 
 ## On a new machine
