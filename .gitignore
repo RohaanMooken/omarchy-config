@@ -1,0 +1,19 @@
+# Allowlist: ignore everything, then un-ignore only what travels between
+# machines. Ignore-first on purpose — ~/.config is full of tokens and session
+# state, and a denylist only protects you from the apps you thought of.
+/*
+!/.gitignore
+!/README.md
+
+!/hypr/
+/hypr/*
+!/hypr/darkwindow.lua
+
+!/omarchy/
+/omarchy/*
+!/omarchy/plugins/
+/omarchy/plugins/*
+!/omarchy/plugins/rohaanmm.lock/
+
+*.bak
+*.bak.*
